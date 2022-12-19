@@ -1,4 +1,4 @@
-### Hi there ! I'm Pillsun Jeong.
+### Hi there ! I'm Pillsun Jeong :)
 
 
 ![pill27211's GitHub stats](https://github-readme-stats.vercel.app/api?username=pill27211&show_icons=true&theme=tokyonight)
