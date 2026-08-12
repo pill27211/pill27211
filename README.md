@@ -29,10 +29,12 @@
 **[🧭 Align — 여행하게](https://github.com/pill27211/align-retrospective)** — 게스트하우스 예약·커뮤니티·여행 동행 매칭 플랫폼 (3인 팀 협업)
 > 역할별 **4개 서버(REST · 실시간 · 업로드 · 워커)** 로 분리하고, **무상태 설계 · 결제/예약 정합성 · 실시간 피드 랭킹 · 관측성**을 처음부터 끝까지 설계. → [아키텍처 회고](https://github.com/pill27211/align-retrospective) · [서비스](https://yeohaenghage.com)
 >
-> Align을 설계하며 부딪힌 **쓰기 경로 성능**과 **동시성 정합성** 문제는, 아래 두 실험으로 분리해 끝까지 파고들어 검증했습니다.
+> 이 중 **쓰기 경로 성능 · 실시간 랭킹 · 동시성 정합성**은 아래 세 실험으로 따로 떼어내 검증·발전시키고 있습니다.
 >
 > **└ [⚡ write-path-bench](https://github.com/pill27211/write-path-bench)** — 동기 vs BullMQ 비동기 쓰기 경로 벤치마크
 > 동일 부하(k6 · Docker)에서 **처리량 4.03×↑ · p99 −64%** 실측. 결과·하네스·원본 측정치까지 재현.
+>
+> **└ [🔥 feed-ranking-lab](https://github.com/pill27211/feed-ranking-lab)** — 실시간 피드 랭킹 시스템을 **NestJS·TS·TypeORM**으로 재구성한 학습·기여형 프로젝트.
 >
 > **└ [🔒 concurrency-correctness-lab](https://github.com/pill27211/concurrency-correctness-lab)** — 서버 동시성 정합성 실험실
 > 레이스 컨디션 방어 4종(atomic · 비관적 · 낙관적 락) 비교 · 분산 락 멱등성 · fencing token.
